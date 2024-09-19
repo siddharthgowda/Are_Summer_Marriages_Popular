@@ -1,11 +1,11 @@
 #### Preamble ####
-# Purpose: Downloads and saves the data from [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Get's Marriage Data from opendatatoronto and stores as csv
+# Author: Siddharth Gowda
+# Date: 2024-Sep-19
+# Contact: siddharth.gowda@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: tidyverse, opendatatoronto installed
+# Any other information needed?
 
 library(tidyverse)
 library(opendatatoronto)

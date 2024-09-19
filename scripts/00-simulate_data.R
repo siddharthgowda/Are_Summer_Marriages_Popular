@@ -4,7 +4,7 @@
 # Date: 2024-Sep-19
 # Contact: siddharth.gowda@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
+# Pre-requisites: tidyverse installed
 # Any other information needed? All data will be from 2000 and beyond
 
 
@@ -43,9 +43,13 @@ marriage_data <- marriage_data %>%
     month_num == 11 ~ "JUL",
     month_num == 12 ~ "AUG",
     TRUE ~ NA_character_  # Default for any unmatched value
-  )) %>% select(month, marriages)
+  )) %>% select(month, marriages) %>% 
+  mutate(is_summer_month = month %in% c("JUN", "JUL", "AUG"))
 # first intermediate table
 # year, month, number of marriages
+
+write_csv(marriage_data, "scripts/simulated_marriage_data.csv") 
+
 
 
 
