@@ -43,4 +43,4 @@ clean_marriage_data <- clean_marriage_data %>%
   mutate(is_summer_month = month %in% c("JUN", "JUL", "AUG"))
 
 #### Save data ####
-write_csv(clean_marriage_data, "data/analysis_data/raw_marriage_data.csv")
+write_csv(clean_marriage_data, "data/analysis_data/clean_marriage_data.csv")
