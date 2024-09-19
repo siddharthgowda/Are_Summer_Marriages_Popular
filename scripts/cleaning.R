@@ -16,7 +16,8 @@ head(raw_marriage_data)
 
 clean_marriage_data <- raw_marriage_data %>% 
   janitor::clean_names() %>% 
-  separate(time_period, into = c("year", "month"), sep = "-") %>% 
+  separate(time_period, into = c("year", "month"), sep = "-") %>%
+  filter(year %in% c(2000:2023)) %>% 
   select(month, id)
 
 head(clean_marriage_data)
