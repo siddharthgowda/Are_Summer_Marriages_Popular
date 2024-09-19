@@ -21,36 +21,38 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
+# Getting Data
 
 ```{r}
-#| include: false
 #| warning: false
 #| message: false
-#| label: fig
-
 # CREATING BAR CHART for marriages by month
 
 marriage_data <- read_csv("../data/analysis_data/clean_marriage_data.csv")
-
-marriage_data %>% ggplot(aes(x = month, y = marriages, fill=is_summer_month)) +
-  geom_bar(stat = "identity") +
-  labs(title = "Marriages by Month in Toronto (2000-2023)", 
-       x = "Month", y = "Number of Marriages", 
-       fill = "Is Summer Month", 
-       caption = "Summer months do not appear to have more marriges") + 
-  theme_minimal()
+head(marriage_data)
 
 ```
 
 # Bar Chart
 
-Here is the graph @fig
+Here is the graph @fig-marriagesbymonth
 
+```{r}
+#| label: fig-marriagesbymonth
+#| fig-cap: "Summer months do not appear to have more marriages"
+#| echo: false
+#| warning: false
+#| message: false
 
+marriage_data %>% ggplot(aes(x = month, y = marriages, fill=is_summer_month)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Marriages by Month in Toronto (2000-2023)", 
+       x = "Month", y = "Number of Marriages", 
+       fill = "Is Summer Month") + 
+  theme_minimal()
+
+```
 
 \newpage
 
-
 # References
-
-
