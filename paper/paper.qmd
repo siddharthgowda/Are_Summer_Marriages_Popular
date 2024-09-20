@@ -8,8 +8,7 @@ date: today
 date-format: long
 abstract: "Marriage can be one of the best days in a person's life, but it can be a hassle getting all family members together. So, people choose specific times to make sure some of their relatives can make it. So we wanted to know if summer marriages are more popular in Toronto because maybe people are more likely to take time off. We found that this is not the case. Marriages seem to be pretty evenly common across months in Toronto, but maybe that isn’t true in other parts of the world."
 format: pdf
-number-sections: true
-bibliography: references.bib
+bibliography: ./references.bib
 ---
 
 ```{r}
