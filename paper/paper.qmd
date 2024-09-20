@@ -20,6 +20,10 @@ bibliography: references.bib
 library(tidyverse)
 ```
 
+# Intro
+
+You can and should cross-reference sections and sub-sections. We use @citeR, @citeOpendatatoronto
+
 # Getting Data
 
 ```{r}
@@ -55,3 +59,5 @@ marriage_data %>% ggplot(aes(x = month, y = marriages, fill=is_summer_month)) +
 \newpage
 
 # References
+
+
